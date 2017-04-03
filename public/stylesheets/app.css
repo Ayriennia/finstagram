@@ -5,11 +5,13 @@ header {
 
 body {
     background-color: whitesmoke;
+    font-family: 'Palanquin', sans-serif;
 }
 
 main {
     background-color: white;
     padding: 16px;
+    
 }
 
 .post {
@@ -19,3 +21,13 @@ main {
 .post .user-info img {
     border-radius: 40%;
 }
+
+.post:hover {
+    background: lightgrey;
+}
+
+.post:active {
+    background: black;
+    padding: 16px;
+}
+

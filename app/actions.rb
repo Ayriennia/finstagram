@@ -11,7 +11,7 @@ end
 
 get '/' do
 
-    post_shark = {
+    @post_shark = {
         username: "sharky_j",
         avatar_url: "http://naserca.com/images/sharky_j.jpg",
         photo_url: "http://naserca.com/images/shark.jpg",
@@ -24,7 +24,7 @@ get '/' do
         }]
     }
     
-    post_whale = {
+    @post_whale = {
         username: "kirk_whalum",
         avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
         photo_url: "http://naserca.com/images/whale.jpg",
@@ -37,10 +37,10 @@ get '/' do
         }]
     }
     
-    post_marlin = {
+    @post_marlin = {
         username: "marlin_peppa",
         avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
-        photo_url: "http://nsacera.com/images/marlin.jpg",
+        photo_url: "http://naserca.com/images/marlin.jpg",
         humanized_time_ago: humanized_time_ago(190),
         like_count: 0,
         comment_count: 1,
@@ -50,5 +50,9 @@ get '/' do
         }]
     }
     
-    [post_shark, post_whale, post_marlin].to_s
+    [@post_shark, @post_whale, @post_marlin].to_s
+    
+    @posts = [@post_shark, @post_whale, @post_marlin]
+    
+    erb :index
 end
